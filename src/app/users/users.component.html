@@ -1,0 +1,30 @@
+<div class="users-main">
+    <button mat-raised-button color="primary" [routerLink]="['/users', 'all']" routerLinkActive="activebutton">All Users</button>
+    <button mat-raised-button color="primary" [routerLink]="['/users', 'customer']" routerLinkActive="activebutton">Customers</button>
+    <button mat-raised-button color="primary" [routerLink]="['/users', 'vendor']" routerLinkActive="activebutton">Venders</button>
+</div>
+
+<table mat-table [dataSource]="filteredDataSource" style="margin-top: 15px">
+  <ng-container matColumnDef="no">
+    <th mat-header-cell *matHeaderCellDef>No.</th>
+    <td mat-cell *matCellDef="let user; let i = index">{{ i + 1 }}</td>
+  </ng-container>
+  <ng-container matColumnDef="userType">
+    <th mat-header-cell *matHeaderCellDef>User Type</th>
+    <td mat-cell *matCellDef="let user">{{ user.userType }}</td>
+  </ng-container>
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Name</th>
+    <td mat-cell *matCellDef="let user">{{ user.name }}</td>
+  </ng-container>
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef>Email</th>
+    <td mat-cell *matCellDef="let user">{{ user.email }}</td>
+  </ng-container>
+  <ng-container matColumnDef="phone">
+    <th mat-header-cell *matHeaderCellDef>Phone</th>
+    <td mat-cell *matCellDef="let user">{{ user.phone }}</td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let user; columns: displayedColumns;"></tr>
+</table>

@@ -1,0 +1,39 @@
+<div class="drop-downs">
+    <mat-form-field appearance="outline">
+        <mat-label>Status</mat-label>
+        <mat-select selected="statuSelected" [(ngModel)]="selectedStatus" (selectionChange)="onStatusSelectionChange($event)">
+            <mat-option *ngFor="let status of productStartus" [value]="status.value">
+                {{status.type}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Availability</mat-label>
+        <mat-select selected="stockSelected" [(ngModel)]="selectedStock" (selectionChange)="onStockSelectionChange($event)">
+            <mat-option *ngFor="let stock of productStock" [value]="stock.value">
+                {{stock.type}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+
+<div class="card-list">
+    <div *ngFor="let product of filteredProducts">
+        <mat-card class="card-main">
+            <mat-card-header>
+                <div mat-card-avatar class="product-image"></div>
+                <mat-card-title>{{ product.title }}</mat-card-title>
+                <mat-card-subtitle>{{ product.price | currency }}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [src]="product.image" alt="Product Image">
+            <mat-card-content>
+                <p>{{ product.description }}</p>
+                <p>Status: {{ product.status }}</p>
+                <p>Availability: {{ product.availability }}</p>
+            </mat-card-content>
+            <mat-card-actions>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
