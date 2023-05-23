@@ -4,4 +4,7 @@
     <button mat-raised-button color="primary" [routerLink]="['child-3']">Third</button>
 </div>
 
+<div class="bg-overlay" *ngIf="displayLodingBar">
 <router-outlet></router-outlet>
+    <div class="spinner-load" *ngIf="displayLodingBar"></div>
+</div>

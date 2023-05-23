@@ -172,11 +172,15 @@ export class ProductsComponent implements OnInit {
   }
 
   updateQueryParams() {
+    // const queryParams = {
+    //   status: this.selectedStatus,
+    //   stock: this.selectedStock
+    // };
     const queryParams = {
       status: this.selectedStatus,
-      ...(this.selectedStock !== 'all' && { stock: this.selectedStock })
+      stock: this.selectedStock !== 'all' ? this.selectedStock : undefined
     };
-    
+
     // TODO: find answer on how to add new property to object conditionally
     // learn array object from javascript.info
     this.router.navigate([], {
@@ -190,7 +194,7 @@ export class ProductsComponent implements OnInit {
     this.filteredProducts = this.productList.filter(product => {
       // TODO: fix it to have only condition which is 2nd one
       const stockMatch = (this.selectedStatus === 'all' || product.status.toLowerCase() === this.selectedStatus) &&
-      (this.selectedStock === 'all' || product.availability.toLowerCase() === this.selectedStock);
+        (this.selectedStock === 'all' || product.availability.toLowerCase() === this.selectedStock);
       return stockMatch;
     });
 
