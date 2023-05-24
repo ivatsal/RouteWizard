@@ -18,6 +18,7 @@ import { MatTableModule } from '@angular/material/table';
     FirstComponent,
     HomeComponent,
     PageNotFoundComponentComponent,
+   
   ],
   imports: [
     BrowserModule,

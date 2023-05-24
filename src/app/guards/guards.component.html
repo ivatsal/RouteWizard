@@ -1,0 +1,7 @@
+<div class="guard-btns">
+    <button mat-raised-button routerLink="can-activate" routerLinkActive="activebutton"> CanActivate</button>
+    <button mat-raised-button routerLink="can-activate-child" routerLinkActive="activebutton">CanActivateChild</button>
+    <button mat-raised-button [routerLink]="['can-deactivate']" routerLinkActive="activebutton">CanLoad</button>
+    <button mat-raised-button [routerLink]="['can-load']" routerLinkActive="activebutton">CanDeactivate</button>
+    <button mat-raised-button [routerLink]="['can-resolve']" routerLinkActive="activebutton">CanResolve</button>
+</div>

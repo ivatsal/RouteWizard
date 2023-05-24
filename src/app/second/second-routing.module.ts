@@ -4,7 +4,6 @@ import { SecondComponent } from './second.component';
 import { PrimaryComponent } from './primary/primary.component';
 import { SecondaryComponent } from './secondary/secondary.component';
 import { ThirdComponent } from './third/third.component';
-import { authGuard } from '../auth.guard';
 
 const routes: Routes = [
   {
@@ -13,7 +12,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'child-one', pathMatch: 'full' },
       { path: 'child-one', component: PrimaryComponent },
       { path: 'child-two', component: SecondaryComponent },
-      { path: 'child-3', component: ThirdComponent, canActivate: [authGuard] }]
+      { path: 'child-3', component: ThirdComponent }]
   }
 ];
 
