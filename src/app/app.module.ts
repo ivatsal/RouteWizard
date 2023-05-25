@@ -11,6 +11,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponentComponent } from './page-not-found-component/page-not-found-component.component';
 import { MatTableModule } from '@angular/material/table';
+import { ProfileComponent } from './profile/profile.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { MatTableModule } from '@angular/material/table';
     FirstComponent,
     HomeComponent,
     PageNotFoundComponentComponent,
+    ProfileComponent,
    
   ],
   imports: [
@@ -27,8 +30,10 @@ import { MatTableModule } from '@angular/material/table';
     MatIconModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })

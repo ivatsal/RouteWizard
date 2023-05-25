@@ -1,0 +1,14 @@
+<div class="profile-btn">
+    <button mat-stroked-button color="accent" (click)="getLocation()">Get Location</button>
+</div>
+
+<div style="display: flex; flex-direction: column; align-items: center;">
+    <h1>Location</h1>
+    <p>Network: {{ location?.network }}</p> 
+    <p>Latitude: {{ location?.latitude }}</p>
+    <p>Longitude: {{ location?.longitude }}</p>
+    <p>Postal: {{ location?.postal }}</p>
+    <p>City: {{ location?.city }}</p>
+    <p>Country: {{ location?.country }}</p>
+    <p>Currency: {{ location?.currency }}</p>
+</div>

@@ -1,1 +1,7 @@
-<p>can-deactivate works!</p>
+<div style="display: flex; flex-direction: column; align-items: center; margin-top: 200px;">
+    <h1>CanDeactivate Component</h1>
+    <form (ngSubmit)="saveChanges()" #myForm="ngForm">
+        <input type="text" [(ngModel)]="formData" name="formData" required>
+        <button type="submit">Save Changes</button>
+    </form>
+</div>

@@ -2,12 +2,15 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FirstComponent } from './first/first.component';
 import { PageNotFoundComponentComponent } from './page-not-found-component/page-not-found-component.component';
+import { ProfileComponent } from './profile/profile.component';
 // name should always start with upper case
 
 const routes: Routes = [
   
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'first-tab', component: FirstComponent },
+  { path: 'profile', component: ProfileComponent },
+
   { path: 'second', loadChildren: () => import('./second/second.module').then(m => m.SecondModule) },
   { path: 'guards', loadChildren: () => import('./guards/guards.module').then(m => m.GuardsModule) },
   
