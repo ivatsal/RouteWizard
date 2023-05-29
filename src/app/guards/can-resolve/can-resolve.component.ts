@@ -8,8 +8,6 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CanResolveComponent implements OnInit {
 
-  resolvedData!: string;
-
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {

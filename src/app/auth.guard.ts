@@ -12,14 +12,14 @@ export const canDeactivate: CanDeactivateFn<any> = (component: any, currentRoute
   return false;
 };
 
+export function canLoad(route: Route): boolean {
+  return false;
+};
+
 export const canMatch: CanMatchFn = (route: Route, segments: UrlSegment[]) => {
   return false;
 };
 
 export const resolve: ResolveFn<any> = (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) => {
-  return false;
-};
-
-export function canLoad(route: Route): boolean {
   return false;
 };

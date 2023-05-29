@@ -6,7 +6,7 @@ import { CanActivateChildComponent } from './can-activate-child/can-activate-chi
 import { CanDeactivateComponent } from './can-deactivate/can-deactivate.component';
 
 import { CanResolveComponent, customResolve } from './can-resolve/can-resolve.component';
-import { authGuard, canActivateChild, canMatch, resolve } from '../auth.guard';
+import { authGuard, canActivateChild, canLoad, canMatch } from '../auth.guard';
 import { CanMatchComponent } from './can-match/can-match.component';
 import { CanLoadComponent } from './can-load/can-load.component';
 
@@ -23,7 +23,7 @@ const routes: Routes = [
     path: 'can-deactivate', component: CanDeactivateComponent,
     canDeactivate: [(component: CanDeactivateComponent) => !component.hasUnsavedChanges],
   },
-  { path: 'can-load', component: CanLoadComponent },
+  { path: 'can-load', component: CanLoadComponent, canLoad: [canLoad] },
   { path: 'can-match', component: CanMatchComponent, canMatch: [canMatch] },
   {
     path: 'can-resolve',
