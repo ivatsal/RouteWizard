@@ -1,0 +1,14 @@
+.main-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
+
+    .input-field {}
+
+    .selected {
+        font-weight: bold;
+      }
+}
+

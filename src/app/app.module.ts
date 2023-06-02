@@ -13,6 +13,10 @@ import { PageNotFoundComponentComponent } from './page-not-found-component/page-
 import { MatTableModule } from '@angular/material/table';
 import { ProfileComponent } from './profile/profile.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatMenuModule } from '@angular/material/menu';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,11 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatButtonModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule,
+    MatSelectModule,
+    MatMenuModule,
+    FormsModule
   ],
   
   providers: [],

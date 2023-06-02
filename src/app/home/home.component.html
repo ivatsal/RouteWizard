@@ -1,1 +1,18 @@
-<p>home works!</p>
+<div class="main-input">
+    <mat-form-field appearance="outline" class="input-field">
+        <input matInput type="text" [(ngModel)]="inputValue">
+        <button matPrefix mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>expand_more</mat-icon>
+        </button>
+        <span>{{ selectedCountry.name }} ({{ selectedCountry.code }})</span>
+    </mat-form-field>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item *ngFor="let country of countries" (click)="selectCountry(country)"
+            [ngClass]="{'selected': selectedCountry === country}">
+            {{ country.name }} ({{ country.code }})
+        </button>
+    </mat-menu>
+    <button mat-raised-button (click)="verifyPhoneNumber()">
+        Verify
+    </button>
+</div>
